@@ -2,6 +2,7 @@
 
 import { COMPANY_CONFIG } from "@/lib/config";
 import { Target, Compass } from "lucide-react";
+import Reveal from "@/components/ui/Reveal";
 
 export default function MissionVision() {
   return (
@@ -11,7 +12,7 @@ export default function MissionVision() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
+        <Reveal className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
           <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-[0.25em] text-[#C7A45B] block">
             STRATEGIC DIRECTIVE
           </span>
@@ -19,12 +20,12 @@ export default function MissionVision() {
             MISSION & <span className="text-[#C7A45B]">VISION.</span>
           </h2>
           <div className="ayat-gold-line w-24 mx-auto mt-2" />
-        </div>
+        </Reveal>
 
         {/* 2-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {/* Mission Card */}
-          <div className="p-6 sm:p-10 bg-[#191422] border border-[#C7A45B]/20 rounded-xs shadow-2xl relative overflow-hidden group hover:border-[#C7A45B]/60 transition-all duration-500">
+          <Reveal className="p-6 sm:p-10 bg-[#191422] border border-[#C7A45B]/20 rounded-xs shadow-2xl relative overflow-hidden group hover:border-[#C7A45B]/60 transition-all duration-500">
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 rounded-xs bg-[#42124F] text-[#C7A45B] flex items-center justify-center font-bold border border-[#C7A45B]/30 flex-shrink-0 group-hover:bg-[#C7A45B] group-hover:text-[#111015] transition-colors">
                 <Target className="w-6 h-6" />
@@ -44,10 +45,10 @@ export default function MissionVision() {
             <p className="text-sm sm:text-base text-[#F7F4EE]/85 font-light leading-relaxed">
               {COMPANY_CONFIG.mission}
             </p>
-          </div>
+          </Reveal>
 
           {/* Vision Card */}
-          <div className="p-6 sm:p-10 bg-[#191422] border border-[#C7A45B]/20 rounded-xs shadow-2xl relative overflow-hidden group hover:border-[#C7A45B]/60 transition-all duration-500">
+          <Reveal delay={0.12} className="p-6 sm:p-10 bg-[#191422] border border-[#C7A45B]/20 rounded-xs shadow-2xl relative overflow-hidden group hover:border-[#C7A45B]/60 transition-all duration-500">
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 rounded-xs bg-[#42124F] text-[#C7A45B] flex items-center justify-center font-bold border border-[#C7A45B]/30 flex-shrink-0 group-hover:bg-[#C7A45B] group-hover:text-[#111015] transition-colors">
                 <Compass className="w-6 h-6" />
@@ -67,7 +68,7 @@ export default function MissionVision() {
             <p className="text-sm sm:text-base text-[#F7F4EE]/85 font-light leading-relaxed">
               {COMPANY_CONFIG.vision}
             </p>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

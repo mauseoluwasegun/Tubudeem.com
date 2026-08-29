@@ -3,13 +3,14 @@
 import { COMPANY_CONFIG } from "@/lib/config";
 import { MapPin, Mail, ShieldCheck, Clock } from "lucide-react";
 import ContactForm from "@/components/forms/ContactForm";
+import Reveal from "@/components/ui/Reveal";
 
 export default function ContactSection() {
   return (
     <section id="contact" className="py-16 sm:py-24 bg-[#F7F4EE] text-[#242127] relative border-t border-[#42124F]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-2xl mb-10 sm:mb-16">
+        <Reveal className="max-w-2xl mb-10 sm:mb-16">
           <span className="text-[10px] sm:text-xs font-mono uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#42124F] block mb-2 sm:mb-3 font-bold">
             GET IN TOUCH
           </span>
@@ -20,11 +21,11 @@ export default function ContactSection() {
           <p className="mt-4 text-xs sm:text-sm text-[#242127]/80 font-light leading-relaxed">
             Reach out to us for general inquiries or to schedule an appointment at our registered office.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Column: Office Info */}
-          <div className="lg:col-span-5 space-y-6">
+          <Reveal className="lg:col-span-5 space-y-6">
             <div className="p-6 sm:p-8 bg-[#111015] text-[#F7F4EE] rounded-xs shadow-xl border border-white/10 space-y-6">
               <div>
                 <span className="text-[10px] font-mono uppercase tracking-widest text-[#C7A45B] block mb-2 font-bold">
@@ -79,15 +80,15 @@ export default function ContactSection() {
               <ShieldCheck className="w-4 h-4 text-[#42124F] flex-shrink-0" />
               <span>We review every message personally.</span>
             </div>
-          </div>
+          </Reveal>
 
           {/* Right Column: Contact Form */}
-          <div className="lg:col-span-7 bg-white p-6 sm:p-8 lg:p-10 border border-[#42124F]/15 rounded-xs shadow-xl">
+          <Reveal delay={0.12} className="lg:col-span-7 bg-white p-6 sm:p-8 lg:p-10 border border-[#42124F]/15 rounded-xs shadow-xl">
             <h3 className="heading-ayat text-xl sm:text-2xl font-extrabold uppercase text-[#111015] mb-6">
               Send a Message
             </h3>
             <ContactForm />
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
