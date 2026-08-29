@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { COMPANY_CONFIG } from "@/lib/config";
-import { MapPin, Mail, Phone, ShieldCheck } from "lucide-react";
+import { MapPin, Mail, ShieldCheck } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -34,7 +34,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-xs text-[#F7F4EE]/70 font-light leading-relaxed max-w-sm">
-              {COMPANY_CONFIG.name} is a strategic investment company deploying capital across real estate, businesses, financial markets, and agriculture.
+              {COMPANY_CONFIG.name} is a Nigeria-based investment company focused on real estate, businesses, and financial markets.
             </p>
 
             <div className="p-3.5 bg-[#42124F]/20 border border-[#C7A45B]/20 rounded-xs text-[11px] font-mono text-[#C7A45B] font-bold">
@@ -72,17 +72,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#portfolio" className="hover:text-[#C7A45B] transition-colors py-1 block">
-                  Portfolio Showcase
-                </Link>
-              </li>
-              <li>
                 <Link href="/blog" className="hover:text-[#C7A45B] transition-colors text-[#C7A45B] font-semibold py-1 block">
                   Market Insights (Blog)
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-[#C7A45B] transition-colors py-1 block">
+                <Link href="/#about" className="hover:text-[#C7A45B] transition-colors py-1 block">
                   About Us
                 </Link>
               </li>
@@ -103,8 +98,8 @@ export default function Footer() {
               <li className="py-0.5">Real Estate</li>
               <li className="py-0.5">Established Businesses</li>
               <li className="py-0.5">Expansion Equity</li>
+              <li className="py-0.5">Startup & Early-Stage Ventures</li>
               <li className="py-0.5">Financial Markets</li>
-              <li className="py-0.5">Agriculture</li>
             </ul>
           </div>
 
@@ -122,10 +117,6 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-[#C7A45B] flex-shrink-0" />
                 <span className="font-mono text-[11px] truncate">{COMPANY_CONFIG.contactEmailPlaceholder}</span>
               </div>
-              <div className="flex items-center space-x-2.5">
-                <Phone className="w-4 h-4 text-[#C7A45B] flex-shrink-0" />
-                <span className="font-mono text-[11px]">{COMPANY_CONFIG.contactPhonePlaceholder}</span>
-              </div>
             </div>
           </div>
         </div>
@@ -142,7 +133,7 @@ export default function Footer() {
             <Link href="/terms" className="hover:text-[#C7A45B] transition-colors">
               Terms of Engagement
             </Link>
-            <Link href="/contact" className="hover:text-[#C7A45B] transition-colors">
+            <Link href="/#contact" className="hover:text-[#C7A45B] transition-colors">
               Contact Us
             </Link>
           </div>

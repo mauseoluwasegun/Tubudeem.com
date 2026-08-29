@@ -15,8 +15,8 @@ export default function OpportunityPreCheck() {
     "Real Estate",
     "Business Investment",
     "SME Growth",
+    "Startup & Early-Stage Ventures",
     "Financial Markets",
-    "Agriculture",
     "Other Strategic Investment",
   ];
 
@@ -48,7 +48,7 @@ export default function OpportunityPreCheck() {
     return {
       status: "high",
       title: "STRONG INVESTMENT FIT · HIGH ALIGNMENT",
-      desc: "Your proposal strongly aligns with TUBUDEEM's investment criteria, asset readiness standards, and capital deployment focus across West Africa.",
+      desc: "Your proposal strongly aligns with TUBUDEEM's investment criteria, asset readiness standards, and capital deployment focus.",
       badgeColor: "bg-[#C7A45B]/20 text-[#C7A45B] border-[#C7A45B]/40",
       ctaText: "Present Your Opportunity Now",
     };

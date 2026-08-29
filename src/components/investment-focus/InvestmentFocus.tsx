@@ -42,6 +42,21 @@ export default function InvestmentFocus() {
     },
     {
       id: "03",
+      title: "Startups & Ventures",
+      subtitle: "EARLY-STAGE CAPITAL & ACCELERATOR SUPPORT",
+      image: "/images/business_focus.jpg",
+      tags: ["Early-Stage", "Accelerator Programs", "Mentorship", "Seed Capital"],
+      description:
+        "Backing early-stage Nigerian startups with seed capital and structured support, including participation in accelerator programs.",
+      criteria: [
+        "Clear problem-solution fit and early market traction",
+        "Committed founding team with relevant domain experience",
+        "Scalable business model with a credible path to revenue",
+        "Openness to structured mentorship and milestone-based funding",
+      ],
+    },
+    {
+      id: "04",
       title: "Financial Markets",
       subtitle: "TREASURY & MONEY MARKET ASSETS",
       image: "/images/financial_focus.jpg",
@@ -53,21 +68,6 @@ export default function InvestmentFocus() {
         "High-liquidity money market instruments",
         "Sovereign & AAA-rated debt securities",
         "Active yield optimization",
-      ],
-    },
-    {
-      id: "04",
-      title: "Agriculture & Strategic",
-      subtitle: "COMMERCIAL AGRO-PROCESSING & PROJECTS",
-      image: "/images/agriculture_focus.jpg",
-      tags: ["Commercial Farming", "Agro-Processing", "Infrastructure", "Niche Projects"],
-      description:
-        "Investing in commercial agricultural processing, green technology farming, and selected high-yield strategic projects.",
-      criteria: [
-        "Commercial-scale processing capacity",
-        "Secured off-take distribution channels",
-        "Sustainable agro-technology & infrastructure",
-        "Long-term value creation & growth",
       ],
     },
   ];
@@ -130,7 +130,7 @@ export default function InvestmentFocus() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#111015] via-transparent to-transparent opacity-80" />
               
               <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-[#42124F]/90 backdrop-blur-md px-3 py-1 sm:px-3.5 sm:py-1.5 text-[10px] sm:text-xs font-mono text-[#C7A45B] font-bold rounded-xs border border-white/10">
-                {focusAreas[activeSector].id} / 04
+                {focusAreas[activeSector].id} / {String(focusAreas.length).padStart(2, "0")}
               </div>
 
               <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 text-white">

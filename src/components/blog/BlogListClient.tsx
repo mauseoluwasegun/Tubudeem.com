@@ -66,7 +66,7 @@ export default function BlogListClient() {
           </h1>
 
           <p className="text-[#F7F4EE]/75 text-base sm:text-lg font-light leading-relaxed">
-            Rigorous analysis, market commentary, and strategic briefings on real estate, private equity, agriculture infrastructure, and West African markets.
+            Rigorous analysis, market commentary, and strategic briefings on real estate, business growth, agriculture infrastructure, and West African markets.
           </p>
         </div>
 
