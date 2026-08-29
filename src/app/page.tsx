@@ -2,7 +2,6 @@ import Hero from "@/components/hero/Hero";
 import SectorStrip from "@/components/sector-strip/SectorStrip";
 import InvestmentFocus from "@/components/investment-focus/InvestmentFocus";
 import OpportunitiesWeSeek from "@/components/opportunity-list/OpportunitiesWeSeek";
-import OpportunityPreCheck from "@/components/conversion/OpportunityPreCheck";
 import InvestmentApproach from "@/components/approach/InvestmentApproach";
 import HomeBlogSection from "@/components/blog/HomeBlogSection";
 import AboutSummary from "@/components/about/AboutSummary";
@@ -17,7 +16,6 @@ export default function Home() {
       <SectorStrip />
       <InvestmentFocus />
       <OpportunitiesWeSeek />
-      <OpportunityPreCheck />
       <InvestmentApproach />
       <HomeBlogSection />
       <AboutSummary />
