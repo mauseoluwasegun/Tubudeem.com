@@ -52,8 +52,8 @@ export const BLOG_POSTS: BlogPost[] = [
     `,
     category: "Real Estate",
     author: {
-      name: "Strategic Investment Desk",
-      role: "Real Estate Division",
+      name: "Tubudeem Team",
+      role: "Tubudeem Investment Nigeria",
       avatar: "/images/tubudeem_icon_darkmode.png",
     },
     publishedAt: "August 15, 2026",
@@ -65,7 +65,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: "2",
     slug: "venture-debt-vs-equity-west-african-scaleups",
-    title: "Structuring Private Equity & Venture Growth in West African Scaleups",
+    title: "Growth Capital & Expansion Financing for West African Scaleups",
     excerpt:
       "Why mezzanine debt, revenue-share models, and minority equity stakes offer superior risk-adjusted returns for mid-sized enterprise growth.",
     content: `
@@ -75,7 +75,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
       <h3 class="text-xl font-bold text-[#C7A45B] mt-8 mb-4">1. Beyond Traditional Bank Lending</h3>
       <p class="mb-4 text-[#F7F4EE]/80 leading-relaxed">
-        Commercial bank interest rates often restrict long-term capital investments for growth companies. Structured private equity and growth debt fill this crucial void by offering customized repayment schedules tied to revenue realization.
+        Commercial bank interest rates often restrict long-term capital investments for growth companies. Structured growth capital and flexible debt fill this crucial void by offering customized repayment schedules tied to revenue realization.
       </p>
 
       <h3 class="text-xl font-bold text-[#C7A45B] mt-8 mb-4">2. High-Growth Sectors</h3>
@@ -92,14 +92,14 @@ export const BLOG_POSTS: BlogPost[] = [
     `,
     category: "Business",
     author: {
-      name: "Private Equity Committee",
-      role: "Corporate Finance",
+      name: "Tubudeem Team",
+      role: "Tubudeem Investment Nigeria",
       avatar: "/images/tubudeem_icon_darkmode.png",
     },
     publishedAt: "August 10, 2026",
     readTime: "8 min read",
     featuredImage: "/images/blog_venture_capital.jpg",
-    tags: ["Private Equity", "Growth Capital", "Scaleups", "West Africa"],
+    tags: ["Growth Capital", "Expansion Financing", "Scaleups", "West Africa"],
     featured: true,
   },
   {
@@ -125,8 +125,8 @@ export const BLOG_POSTS: BlogPost[] = [
     `,
     category: "Agriculture",
     author: {
-      name: "Agri-Tech Advisory",
-      role: "Agribusiness Division",
+      name: "Tubudeem Team",
+      role: "Tubudeem Investment Nigeria",
       avatar: "/images/tubudeem_icon_darkmode.png",
     },
     publishedAt: "July 28, 2026",
@@ -158,8 +158,8 @@ export const BLOG_POSTS: BlogPost[] = [
     `,
     category: "Financial Markets",
     author: {
-      name: "Treasury & Trading Desk",
-      role: "Financial Markets",
+      name: "Tubudeem Team",
+      role: "Tubudeem Investment Nigeria",
       avatar: "/images/tubudeem_icon_darkmode.png",
     },
     publishedAt: "July 18, 2026",

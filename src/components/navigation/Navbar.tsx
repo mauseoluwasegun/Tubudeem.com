@@ -30,10 +30,9 @@ export default function Navbar() {
     { name: "Our Focus", href: "/#focus" },
     { name: "Opportunities", href: "/#opportunities" },
     { name: "Approach", href: "/#approach" },
-    { name: "Portfolio", href: "/#portfolio" },
     { name: "Insights", href: "/blog" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "About", href: "/#about" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -52,8 +51,6 @@ export default function Navbar() {
             </span>
           </div>
           <div className="hidden md:flex items-center space-x-4 text-[10px] uppercase tracking-widest text-[#F7F4EE]/70 font-semibold">
-            <span>STRATEGIC CAPITAL ALLOCATION</span>
-            <span className="text-[#C7A45B]">•</span>
             <span>BUILDING LASTING VALUE</span>
           </div>
         </div>

@@ -4,7 +4,7 @@ import BlogListClient from "@/components/blog/BlogListClient";
 export const metadata: Metadata = {
   title: "Market Insights & Strategic Briefings | Tubudeem Investment Nigeria",
   description:
-    "Explore strategic research, real estate market reports, private equity analysis, and agribusiness infrastructure intelligence across Nigeria and West Africa.",
+    "Explore strategic research, real estate market reports, growth capital analysis, and agribusiness infrastructure intelligence across Nigeria and West Africa.",
   openGraph: {
     title: "Market Insights & Strategic Briefings | Tubudeem Investment Nigeria",
     description:

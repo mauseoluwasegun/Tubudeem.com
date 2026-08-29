@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { opportunityFormSchema, ACCEPTED_FILE_TYPES, MAX_FILE_SIZE } from "@/lib/validation/opportunity";
 import { COMPANY_CONFIG } from "@/lib/config";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import fs from "fs";
 import path from "path";
 
@@ -110,20 +110,14 @@ export async function POST(req: NextRequest) {
       JSON.stringify(submissionRecord) + "\n"
     );
 
-    // 3. Email Dispatch via Nodemailer (if SMTP env vars are present)
-    if (process.env.SMTP_HOST && process.env.SMTP_USER) {
-      const transporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST,
-        port: Number(process.env.SMTP_PORT) || 587,
-        secure: process.env.SMTP_SECURE === "true",
-        auth: {
-          user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASS,
-        },
-      });
+    // 3. Email Dispatch via Resend (if RESEND_API_KEY is present)
+    if (process.env.RESEND_API_KEY) {
+      const resend = new Resend(process.env.RESEND_API_KEY);
 
-      const mailOptions = {
-        from: `"TUBUDEEM Opportunities" <${process.env.SMTP_USER}>`,
+      const fromAddress = process.env.RESEND_FROM_EMAIL || "contact@tubudeem.com";
+
+      const { error: resendError } = await resend.emails.send({
+        from: `TUBUDEEM Opportunities <${fromAddress}>`,
         to: COMPANY_CONFIG.recipientEmail,
         replyTo: email,
         subject: `[New Opportunity Submission] ${category} - ${companyName}`,
@@ -172,9 +166,11 @@ Attachment: ${attachmentDetails ? attachmentDetails.filename : "None"}
               },
             ]
           : [],
-      };
+      });
 
-      await transporter.sendMail(mailOptions);
+      if (resendError) {
+        console.error("Resend email error:", resendError);
+      }
     }
 
     return NextResponse.json(

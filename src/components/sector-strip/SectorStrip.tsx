@@ -6,15 +6,15 @@ export default function SectorStrip() {
   const highlights = [
     { label: "REGISTERED ENTITY", val: `RC NO: ${COMPANY_CONFIG.rcNumber}` },
     { label: "INVESTMENT FOCUS", val: "4 CORE SECTORS" },
-    { label: "HEADQUARTERS", val: "ONIKAN, LAGOS STATE" },
-    { label: "PROPOSAL REVIEW", val: "CONFIDENTIAL & FAST" },
+    { label: "OFFICE", val: "ONIKAN, LAGOS STATE" },
+    { label: "PROPOSAL REVIEW", val: "CONFIDENTIAL" },
   ];
 
   const sectors = [
     "REAL ESTATE ACQUISITION & DEVELOPMENT",
     "ESTABLISHED BUSINESS EXPANSION",
+    "STARTUP & EARLY-STAGE VENTURES",
     "FINANCIAL MARKETS & TREASURY ASSETS",
-    "AGRICULTURE & STRATEGIC PROJECTS",
   ];
 
   return (

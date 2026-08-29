@@ -7,14 +7,13 @@ import Footer from "@/components/footer/Footer";
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://tubudeem.com"),
   title: `${COMPANY_CONFIG.name} | Investing in Opportunities. Building Lasting Value.`,
-  description: `${COMPANY_CONFIG.name} identifies opportunities across real estate, businesses, financial markets, agriculture and strategic investments in Nigeria and West Africa.`,
+  description: `${COMPANY_CONFIG.name} identifies opportunities across real estate, businesses, financial markets, and strategic investments in Nigeria and West Africa.`,
   keywords: [
     "Tubudeem Investment Nigeria Limited",
     "Tubudeem Investment",
     "Real Estate Investment Nigeria",
     "Business Expansion Capital Lagos",
     "Financial Markets Nigeria",
-    "Agricultural Investments Lagos",
     "Lawson Street Onikan",
     "RC 6907732",
   ],

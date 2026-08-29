@@ -7,14 +7,14 @@ export const COMPANY_CONFIG = {
   country: "Nigeria",
   primaryBrandStatement: "INVESTING IN OPPORTUNITIES. BUILDING LASTING VALUE.",
   supportingMessage:
-    "We identify promising opportunities, provide capital, and support sustainable growth across real estate, businesses, financial markets and other strategic investments.",
+    "We identify promising opportunities and provide capital and support to help them grow, across real estate, businesses, startups and financial markets in Nigeria.",
   mission:
-    "To identify high-potential opportunities across real estate, businesses, financial markets, and agriculture, deploying disciplined capital, rigorous risk management, and strategic oversight to build lasting value and drive sustainable growth.",
+    "To identify high-potential opportunities across real estate, businesses, startups, and financial markets, and apply disciplined capital and careful risk management to help them grow.",
   vision:
-    "To be a leading, highly trusted African investment house recognized for institutional integrity, capital discipline, and compounding long-term value for partners, businesses, and communities.",
+    "To grow into a trusted Nigerian investment partner, known for integrity, discipline, and consistent long-term value for the people and businesses we work with.",
   recipientEmail: process.env.OPPORTUNITY_RECIPIENT_EMAIL || "contact@tubudeem.com",
   contactPhonePlaceholder: "+234 (0) 1 234 5678",
-  contactEmailPlaceholder: "proposals@tubudeem.com",
+  contactEmailPlaceholder: "contact@tubudeem.com",
   socialLinks: {
     linkedin: "https://linkedin.com/company/tubudeem-investment",
     twitter: "https://twitter.com/tubudeem",
@@ -23,8 +23,8 @@ export const COMPANY_CONFIG = {
     "Real Estate",
     "Business Investment",
     "SME Growth",
+    "Startup & Early-Stage Ventures",
     "Financial Markets",
-    "Agriculture",
     "Other Strategic Investment",
   ] as const,
   principles: [

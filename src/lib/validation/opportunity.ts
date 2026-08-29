@@ -29,8 +29,8 @@ export const opportunityFormSchema = z.object({
     "Real Estate",
     "Business Investment",
     "SME Growth",
+    "Startup & Early-Stage Ventures",
     "Financial Markets",
-    "Agriculture",
     "Other Strategic Investment",
   ], {
     errorMap: () => ({ message: "Please select a valid investment category" }),

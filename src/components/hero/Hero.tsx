@@ -14,8 +14,8 @@ import {
   Building2,
   Briefcase,
   TrendingUp,
-  Sprout,
   CheckCircle2,
+  Rocket,
 } from "lucide-react";
 import { COMPANY_CONFIG } from "@/lib/config";
 
@@ -24,6 +24,7 @@ export default function Hero() {
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
   const [activeSectorIndex, setActiveSectorIndex] = useState(0);
+  const [showSectorsPanel, setShowSectorsPanel] = useState(true);
 
   const sectors = [
     {
@@ -34,9 +35,15 @@ export default function Hero() {
     },
     {
       title: "HIGH-GROWTH ENTERPRISES",
-      sub: "Venture debt & equity expansion backing for mid-market West African enterprises.",
+      sub: "Capital and hands-on support to help growing Nigerian businesses expand.",
       icon: Briefcase,
-      badge: "Private Equity",
+      badge: "Growth Capital",
+    },
+    {
+      title: "STARTUP & EARLY-STAGE VENTURES",
+      sub: "Backing early-stage Nigerian startups and accelerator programs with capital and mentorship.",
+      icon: Rocket,
+      badge: "Startup Investment",
     },
     {
       title: "FINANCIAL & TREASURY ASSETS",
@@ -44,19 +51,17 @@ export default function Hero() {
       icon: TrendingUp,
       badge: "Fixed Income",
     },
-    {
-      title: "AGRIBUSINESS INFRASTRUCTURE",
-      sub: "Mechanized processing facilities, cold storage hubs, and high-margin export value chains.",
-      icon: Sprout,
-      badge: "Agri-Tech & Logistics",
-    },
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveSectorIndex((prev) => (prev + 1) % sectors.length);
     }, 6000);
-    return () => clearInterval(timer);
+    const hideTimer = setTimeout(() => setShowSectorsPanel(false), 2000);
+    return () => {
+      clearInterval(timer);
+      clearTimeout(hideTimer);
+    };
   }, [sectors.length]);
 
   const togglePlay = () => {
@@ -90,7 +95,7 @@ export default function Hero() {
           poster="/images/investcorp_cover.jpg"
           className="w-full h-full object-cover filter brightness-[0.45] contrast-125 scale-105 transition-transform duration-1000"
         >
-          <source src="/images/investcorp_hero_video.mp4" type="video/mp4" />
+          <source src="/images/Corporate_investment_film_sequence_202608291201.mp4" type="video/mp4" />
           <source src="/images/hero_background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -133,7 +138,7 @@ export default function Hero() {
             {/* Corporate Status Eyebrow */}
             <div className="inline-flex items-center space-x-3 px-3.5 py-1.5 bg-[#42124F]/70 border border-[#C7A45B]/40 rounded-full text-[#C7A45B] text-[10px] sm:text-xs font-mono font-bold uppercase tracking-widest backdrop-blur-md shadow-lg">
               <ShieldCheck className="w-4 h-4 text-[#C7A45B]" />
-              <span>OFFICIAL ENTITY · RC NO {COMPANY_CONFIG.rcNumber}</span>
+              <span>REGISTERED COMPANY · RC {COMPANY_CONFIG.rcNumber}</span>
             </div>
 
             {/* Main Headline */}
@@ -190,63 +195,57 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Capital Allocation Stats Panel */}
-          <div className="lg:col-span-4 hidden lg:block">
-            <div className="bg-[#14121A]/90 backdrop-blur-xl border border-[#C7A45B]/30 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6">
-              <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                <span className="text-xs font-mono uppercase tracking-widest text-[#C7A45B] font-bold">
-                  PORTFOLIO METRICS
-                </span>
-                <span className="px-2.5 py-0.5 bg-[#42124F] text-[#C7A45B] text-[10px] font-mono rounded-full font-bold">
-                  2026 ACTIVE
-                </span>
-              </div>
+          {/* Right Column: Capital Allocation Stats Panel — shows 2s on load then fades out */}
+          <div className="lg:col-span-4 hidden lg:block relative min-h-[420px]">
+            <AnimatePresence>
+              {showSectorsPanel && (
+                <motion.div
+                  initial={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -12, scale: 0.97 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  className="absolute inset-0 bg-[#14121A]/90 backdrop-blur-xl border border-[#C7A45B]/30 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6"
+                >
+                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                    <span className="text-xs font-mono uppercase tracking-widest text-[#C7A45B] font-bold">
+                      SECTORS WE FOCUS ON
+                    </span>
+                  </div>
 
-              <div className="space-y-5">
-                <div className="p-4 bg-[#18161D] rounded-xl border border-white/5">
-                  <div className="text-[10px] font-mono uppercase text-[#F7F4EE]/60 mb-1">
-                    TARGET CAPITAL DEPLOYMENT
-                  </div>
-                  <div className="text-2xl font-bold font-mono text-[#C7A45B]">
-                    ₦100M - ₦2.5B+
-                  </div>
-                  <div className="text-[11px] text-[#F7F4EE]/70 font-light mt-1">
-                    Per Deal Opportunity / JV Development
-                  </div>
-                </div>
+                  <div className="space-y-5">
+                    <div className="p-4 bg-[#18161D] rounded-xl border border-white/5">
+                      <div className="text-[10px] font-mono uppercase text-[#F7F4EE]/60 mb-1">
+                        CORE TARGET SECTORS
+                      </div>
+                      <div className="text-sm font-bold text-white flex flex-wrap gap-2 mt-2">
+                        {["Real Estate", "Growth Capital", "Startups", "Fixed Income"].map((tag) => (
+                          <span
+                            key={tag}
+                            className="px-2.5 py-1 bg-[#42124F]/50 border border-[#C7A45B]/30 rounded-md text-[10px] font-mono text-[#C7A45B]"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
 
-                <div className="p-4 bg-[#18161D] rounded-xl border border-white/5">
-                  <div className="text-[10px] font-mono uppercase text-[#F7F4EE]/60 mb-1">
-                    CORE TARGET SECTORS
+                    <div className="p-4 bg-[#18161D] rounded-xl border border-white/5 flex items-center justify-between">
+                      <div>
+                        <div className="text-xs font-bold text-white">Careful Proposal Review</div>
+                        <div className="text-[11px] text-[#F7F4EE]/60 font-mono">We review every submission personally</div>
+                      </div>
+                      <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                    </div>
                   </div>
-                  <div className="text-sm font-bold text-white flex flex-wrap gap-2 mt-2">
-                    {["Real Estate", "Venture Debt", "Agri-Tech", "Fixed Income"].map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-1 bg-[#42124F]/50 border border-[#C7A45B]/30 rounded-md text-[10px] font-mono text-[#C7A45B]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
 
-                <div className="p-4 bg-[#18161D] rounded-xl border border-white/5 flex items-center justify-between">
-                  <div>
-                    <div className="text-xs font-bold text-white">Rapid Proposal Evaluation</div>
-                    <div className="text-[11px] text-[#F7F4EE]/60 font-mono">Response within 72 Business Hours</div>
-                  </div>
-                  <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                </div>
-              </div>
-
-              <Link
-                href="/submit-opportunity"
-                className="w-full inline-flex items-center justify-center py-3 bg-[#42124F]/80 hover:bg-[#42124F] border border-[#C7A45B]/40 text-[#C7A45B] text-xs font-mono font-bold uppercase tracking-widest rounded-xl transition-colors"
-              >
-                <span>Check Deal Eligibility ↗</span>
-              </Link>
-            </div>
+                  <Link
+                    href="/submit-opportunity"
+                    className="w-full inline-flex items-center justify-center py-3 bg-[#42124F]/80 hover:bg-[#42124F] border border-[#C7A45B]/40 text-[#C7A45B] text-xs font-mono font-bold uppercase tracking-widest rounded-xl transition-colors"
+                  >
+                    <span>Check Deal Eligibility ↗</span>
+                  </Link>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>

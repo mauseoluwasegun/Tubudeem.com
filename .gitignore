@@ -35,3 +35,13 @@ yarn-error.log*
 
 # agents / cli
 .agents
+
+# ide
+.idea/
+
+# local runtime data
+scratch_logs/
+scratch_uploads/
+
+# agent tools (local installs)
+claude-seo/

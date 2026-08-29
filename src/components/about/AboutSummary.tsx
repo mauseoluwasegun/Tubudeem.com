@@ -23,6 +23,10 @@ export default function AboutSummary() {
               {COMPANY_CONFIG.name} operates across multiple investment areas, identifying opportunities where disciplined capital and long-term thinking can create sustainable value.
             </p>
 
+            <p className="text-sm sm:text-base text-brand-body/75 font-light leading-relaxed">
+              We operate with a conviction that sustainable financial returns are unlocked by fundamental economic value, disciplined capital allocation, and active partnership with project owners and entrepreneurs.
+            </p>
+
             <div className="pt-4 border-t border-brand-purple/10 grid grid-cols-2 gap-4 text-xs font-mono text-brand-charcoal">
               <div>
                 <span className="text-brand-purple/60 block mb-1">REGISTRATION</span>
@@ -36,10 +40,10 @@ export default function AboutSummary() {
 
             <div className="pt-4">
               <Link
-                href="/about"
+                href="/#contact"
                 className="inline-flex items-center text-xs font-semibold uppercase tracking-widest text-brand-purple hover:text-brand-champagne transition-colors group"
               >
-                <span>Read Full Corporate Profile</span>
+                <span>Get in Touch</span>
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
